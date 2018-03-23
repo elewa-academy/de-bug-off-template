@@ -1,6 +1,6 @@
 # Summary
 
-* [Front page](README.md)   
+* [My Notes](README.md)   
 * Algorithms
   * [if's inside for loops](./02-04-2018__08-04-2018/05-04-2018.md)
   * [recursion](./09-04-2018__15-04-2018/14-04-2018.md)

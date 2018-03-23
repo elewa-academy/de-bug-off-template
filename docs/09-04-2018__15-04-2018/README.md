@@ -3,3 +3,5 @@ Provide an overview for what you did this week:
 * challenges
 * accomplishments
 * new plans
+
+Write this on your weekly review day.

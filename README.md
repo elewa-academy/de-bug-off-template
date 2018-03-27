@@ -2,18 +2,19 @@
 
 Fork this repo and make it your own.  You will use it for the remainder of this curriculum to organize, review, and share your notes.  Completing this repo will turn your notes into a powerful study & review tool, a showcase of your knowledge, and substantial practice with organizing and deploying projects to GitHub.
  
-
 Initial setup
 * Fork this repo
 * Set gh-pages settings to build from "master /docs"
   * This will host your notes live at "user_name".github.io/"repo_name"
-  * See the template GitBook [here](http://elewa-academy.github.io/study-journal-template/)
 * Clone the repo
 * Run "npm install -g gitbook && gitbook install" in the cloned directory
 * Run "chmod a+x ./scripts/publish.sh" in the cloned directory
 
 To Publish:  
 * Type "./scripts/publish.sh" from terminal in your Journal directory
+
+Concepts GitBook:
+* Your GitBook will look [something like this](https://elewa-academy.github.io/study-journal-template).
 
 Quizzes:
 * You will use [this quiz plugin](https://github.com/chudaol/gitbook-plugin-quiz) to write self-review quizzes for your notes.  The quizzes will be live and interactive on your journal's url.

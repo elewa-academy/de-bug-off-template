@@ -7,6 +7,7 @@ Initial setup
 * Fork this repo
 * Set gh-pages settings to build from "master /docs"
   * This will host your notes live at "user_name".github.io/"repo_name"
+  * See the template GitBook [here](http://elewa-academy.github.io/study-journal-template/)
 * Clone the repo
 * Run "npm install -g gitbook && gitbook install" in the cloned directory
 * Run "chmod a+x ./scripts/publish.sh" in the cloned directory

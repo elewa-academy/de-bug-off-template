@@ -244,9 +244,18 @@
 <hr>
 <h2 id="buggy-code">Buggy Code</h2>
 <blockquote>
-<p><a id="bug.js" href="../bug.js">bug.js</a></p>
+<p><a id="bug.js" href="bug.js">bug.js</a></p>
 </blockquote>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">Error: file not found: /Users/master/Documents/elewa-academy/curriculum/206-de-bug-off-template/hoisting/bug.js<br></div></div>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">var myvar = &quot;global&quot;;
+function buggy() {
+    console.log(myvar); // (*)
+    if (true) {
+        var myvar = &quot;local&quot;; // (**)
+    }
+    console.log(myvar);
+}
+
+// http://2ality.com/2011/02/javascript-variable-scoping-and-its.html<br></div></div>
 
 
 
@@ -326,7 +335,7 @@ function fixed() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Inside a Function","level":"1.2.1","depth":2,"next":{"title":"Repo","level":"1.3","depth":1,"url":"https://github.com/elewa-academy/de-bug-off-template","ref":"https://github.com/elewa-academy/de-bug-off-template","articles":[]},"previous":{"title":"Hoisting","level":"1.2","depth":1,"path":"hoisting/README.md","ref":"./hoisting/README.md","articles":[{"title":"Inside a Function","level":"1.2.1","depth":2,"path":"hoisting/inside-functions/README.md","ref":"./hoisting/inside-functions/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","include-codeblock","ace","include-html"],"pluginsConfig":{"ace":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"include-html":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"hoisting/inside-functions/README.md","mtime":"2018-03-30T11:47:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-30T13:20:58.839Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Inside a Function","level":"1.2.1","depth":2,"next":{"title":"Repo","level":"1.3","depth":1,"url":"https://github.com/elewa-academy/de-bug-off-template","ref":"https://github.com/elewa-academy/de-bug-off-template","articles":[]},"previous":{"title":"Hoisting","level":"1.2","depth":1,"path":"hoisting/README.md","ref":"./hoisting/README.md","articles":[{"title":"Inside a Function","level":"1.2.1","depth":2,"path":"hoisting/inside-functions/README.md","ref":"./hoisting/inside-functions/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","include-codeblock","ace","include-html"],"pluginsConfig":{"ace":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"include-html":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"hoisting/inside-functions/README.md","mtime":"2018-03-30T13:22:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-03-30T13:22:42.504Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

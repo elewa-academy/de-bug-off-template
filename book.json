@@ -1,5 +1,5 @@
 {
-	"plugins": ["collapsible-chapters",  "include-codeblock", "ace",  "include-html" ],
+	"plugins": ["collapsible-chapters",  "include-codeblock", "ace"],
 	"pluginsConfig": {
         "include-codeblock": {
             "template": "acefull",

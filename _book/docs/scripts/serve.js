@@ -100,7 +100,7 @@ var BugDispatch = {
             },
             'w3c': function(s) {
                 this.bug.style.transform = s;
-           }
+            }
         };
 
 

@@ -6,7 +6,8 @@ This is a tricky bug because there is no way to figure it out logically by traci
 * [Buggy Code](#buggy-code)
 * [Fix](#fix)
 * [Test Cases](#test-cases)
-* [GitHub Issue](direct link to the challenge issue)
+* [Resources](#resources)
+* [The Challenge](direct link to the challenge issue)
 
 ___
 
@@ -32,6 +33,14 @@ ___
 [import, test-cases.js](./test-cases.js)
 
 [TOP](#hoisting-inside-a-function)
+
+___
+
+## Resources
+
+* [A Guide to Hoisting](https://medium.freecodecamp.org/what-is-variable-hoisting-differentiating-between-var-let-and-const-in-es6-f1a70bb43d)
+
+[TOP](#resources)
 
 ___
 ___

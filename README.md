@@ -1,6 +1,6 @@
-# Study Journal Template
+# (De)bug-off Template Repo
 
-Fork this repo and make it your own.  You will use it for the remainder of this curriculum to organize, review, and share your notes.  Completing this repo will turn your notes into a powerful study & review tool, a showcase of your knowledge, and substantial practice with organizing and deploying projects to GitHub.
+Fork this repo and make it your own.  You will use it for the remainder of this curriculum to practice collaborative workflow, and to build a de-bugging reference.  Keeping your repo up to date and contributing to your classmates' repos will take some effort, but will save you so much time in the future when you have a complete & well organized reference of common JS bugs.
  
 Initial setup
 * Fork this repo

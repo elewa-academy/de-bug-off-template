@@ -14,7 +14,7 @@
         },         
         "scripts": {
             "files": [
-                "./scripts/bugzz.js"
+                "./scripts/serve.js"
             ]
         }
     }

@@ -3,6 +3,7 @@
 * [My Notes](README.md)   
 * [Hoisting](./hoisting/README.md)
     * [Inside a Function](./hoisting/inside-functions/README.md)
+* [Repo](https://github.com/elewa-academy/de-bug-off-template)
 * [Gallery](your debugoff gallery)
 * [Home](your portfolio)
 

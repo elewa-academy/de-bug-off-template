@@ -57,17 +57,6 @@ Directory Structure Explained:
 
 ```
 
-<script type='text/javascript' src='./scripts/bugzz.js'></script>
-<script type='text/javascript'>
-	// default fruit fly bug:
-	new BugController({
-	});
-	// default spiders:
-	new SpiderController({
-	});
-	// https://github.com/Auz/Bug
-</script>
-
 
 ___
 ___

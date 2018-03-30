@@ -2,7 +2,8 @@
 	"plugins": [
 			"collapsible-chapters",
 			"include-codeblock", 
-			"ace"
+			"ace",
+            "scripts"
 		],
 	"pluginsConfig": {
         "include-codeblock": {
@@ -10,6 +11,11 @@
             "unindent": true,
             "theme": "monokai",
             "edit": true
+        },         
+        "scripts": {
+            "files": [
+                "./scripts/bugzz.js"
+            ]
         }
     }
 }

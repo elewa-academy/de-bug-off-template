@@ -33,12 +33,12 @@
 var BugDispatch = {
 
     options: {
-        minDelay: 5000,
-        maxDelay: 10000,
+        minDelay: 3000,
+        maxDelay: 5000,
         minBugs: 1,
-        maxBugs: 5,
+        maxBugs: 6,
         minSpeed: 5,
-        maxSpeed: 10,
+        maxSpeed: 15,
         maxLargeTurnDeg: 150,
         maxSmallTurnDeg: 10,
         maxWiggleDeg: 5,
@@ -50,7 +50,7 @@ var BugDispatch = {
         canFly: true,
         canDie: true,
         numDeathTypes: 4,
-        monitorMouseMovement: true,
+        monitorMouseMovement: false,
         eventDistanceToBug: 40,
         minTimeBetweenMultipy: 5000,
         mouseOver: 'random' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'

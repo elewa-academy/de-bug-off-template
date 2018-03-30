@@ -1,6 +1,6 @@
 # Summary
 
-* [My Notes](README.md)   
+* [(De)bug-off](README.md)   
 * [Hoisting](./hoisting/README.md)
     * [Inside a Function](./hoisting/inside-functions/README.md)
 * [Repo](https://github.com/elewa-academy/de-bug-off-template)

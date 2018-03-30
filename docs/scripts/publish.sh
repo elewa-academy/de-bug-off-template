@@ -15,7 +15,7 @@ cp -rf ./_book/. ./docs/
 rm -rf _book
 # commit recent build
 git add .
-git commit -m 'publishing'
+git commit -m 'publishing to vanders'
 # publish changes
 git push vanders master
 

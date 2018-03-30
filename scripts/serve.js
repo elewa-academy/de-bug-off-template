@@ -33,10 +33,10 @@
 var BugDispatch = {
 
     options: {
-        minDelay: 500,
-        maxDelay: 10000,
-        minBugs: 2,
-        maxBugs: 20,
+        minDelay: 5000,
+        maxDelay: 15000,
+        minBugs: 1,
+        maxBugs: 3,
         minSpeed: 5,
         maxSpeed: 10,
         maxLargeTurnDeg: 150,
@@ -49,10 +49,10 @@ var BugDispatch = {
         zoom: 10, // random zoom variation from 1 to 10 - 10 being full size.
         canFly: true,
         canDie: true,
-        numDeathTypes: 3,
-        monitorMouseMovement: false,
+        numDeathTypes: 4,
+        monitorMouseMovement: true,
         eventDistanceToBug: 40,
-        minTimeBetweenMultipy: 1000,
+        minTimeBetweenMultipy: 5000,
         mouseOver: 'random' // can be 'fly', 'flyoff' (if the bug can fly), die', 'multiply', 'nothing' or 'random'
     },
 

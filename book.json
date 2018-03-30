@@ -1,16 +1,11 @@
 {
-	"plugins": ["collapsible-chapters",  "include-codeblock", "ace", "injection"],
+	"plugins": ["collapsible-chapters",  "include-codeblock", "ace",  "include-html" ],
 	"pluginsConfig": {
         "include-codeblock": {
             "template": "acefull",
             "unindent": true,
             "theme": "monokai",
             "edit": true
-        },
-        "injection": {
-            "js": [
-                "scripts/bugzz.js"
-                ]
-            }
+        }
     }
 }

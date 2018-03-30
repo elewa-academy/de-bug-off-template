@@ -13,40 +13,34 @@ Initial setup
 To Publish:  
 * Type "./scripts/publish.sh" from terminal in your Journal directory
 
-Concepts GitBook:
-* Your GitBook will look [something like this](https://elewa-academy.github.io/study-journal-template).
+Debugging Reference:
+* Your GitBook will look [something like this](https://elewa-academy.github.io/de-bug-off-template).
 
-Quizzes:
-* You will use [this quiz plugin](https://github.com/chudaol/gitbook-plugin-quiz) to write self-review quizzes for your notes.  The quizzes will be live and interactive on your journal's url.
+Code Snippets:
+* You will use [gitbook-plugin-include-codeblock](https://github.com/azu/gitbook-plugin-include-codeblock) to embed interactive code snippets into your debugging reference book.
 
 Directory Structure Explained: 
 ```
-study-journal
-|-- /xx-yy_aa-bb
-|   * A folder for each week, labeled by date
-|   * There will be one file per day, that day's notes
-|   * Or maybe one file every few days. you'll find what works
+(De)bug-off Repo
 |
-|-- /concepts
-|   * Contains one file for each important concept
-|   * You get to decide what these are
-|   * Each one of these will become a page in your GitBook
-|   * These will link to the days you studied that topic
+|-- /Challenges
+|   * This is where you will host your debug challenges
+|   * Give them unhelpful names so people have to figure out what's wrong
+|
+|-- /Cagegory-x
+|   |-- /use-case-y
+|   |   |-- fix.js          - your fix
+|   |   |-- test-cases.js   - to play around with in the browser
+|   |   |--- README.md      - where someone will go to study your solution
+|   * Challengees will offer these files and directories in their pull requests
+|   * You will accept or reject their requests to build your debugging reference book
 |
 |-- /docs
 |   * The publis.sh script will buid the GitBook into this folder
 |   * GitHub Pages will build from this folder
 |
 |-- /node_modules
-|   |-- /gitbook-plugin-collapsible-chapters
-|   |-- /gitbook-plugin-quiz
-|   |-- /jquery
-|   |-- /underscore
-|
-|-- /quizes
-|   * You will have one integrated quiz for each conept
-|   * The quizes will be built with gitbook-plugin-quiz
-|   * You will add to these quizes regulary as you learn more about this concept
+|   * A lot
 |
 |-- /scripts
 |   |-- build.sh    - Build the GitBook into /docs without publishing
@@ -62,6 +56,17 @@ study-journal
 
 
 ```
+
+<script type='text/javascript' src='./scripts/bugzz.js'></script>
+<script type='text/javascript'>
+	// default fruit fly bug:
+	new BugController({
+	});
+	// default spiders:
+	new SpiderController({
+	});
+	// https://github.com/Auz/Bug
+</script>
 
 
 ___

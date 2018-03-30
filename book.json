@@ -1,21 +1,11 @@
 {
-	"plugins": ["collapsible-chapters", "quiz"],
+	"plugins": ["collapsible-chapters",  "include-codeblock", "ace"],
 	"pluginsConfig": {
-	    "quiz": {
-	            "labels": {
-	                "check"             : "Check my answers",
-	                "showExplanation"   : "Explain", 
-	                "showCorrect"       : "Show all",   
-	                "explanationHeader" : "Explanation"
-	            },
-	            "text": {
-	                "noChosen"    : "Choose at least one answer",  
-	                "incomplete"  : "Some correct answers are missing" 
-	            },
-	            "buttons": {
-	                "showCorrect"       : true, 
-	                "showExplanation"   : true 
-	            }
-	    }
-	}
+        "include-codeblock": {
+            "template": "acefull",
+            "unindent": true,
+            "theme": "monokai",
+            "edit": true
+        }
+    }
 }

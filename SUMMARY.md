@@ -1,12 +1,10 @@
 # Summary
 
 * [My Notes](README.md)   
-* [Algorithms](./concepts/algorithms.md)
-  * [Quiz](./quizzes/algorithms.md)
-* [Git & GitHub](./concepts/git-github.md)
-  * [Quiz](./quizzes/git-github.md)
-* [Repo](https://github.com/elewa-academy/study-journal-template)
-* [Home (your portfolio)](https://elewa-academy.github.io)
+* [Hoisting](./hoisting/README.md)
+    * [Inside a Function](./hoisting/inside-functions/README.md)
+* [Gallery](your debugoff gallery)
+* [Home](your portfolio)
 
 
 ___

@@ -9,8 +9,8 @@
         },
         "injection": {
             "js": [
-                "../scripts/bugzz.js"
-            ]
-        }
+                "scripts/bugzz.js"
+                ]
+            }
     }
 }

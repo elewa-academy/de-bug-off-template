@@ -13,7 +13,7 @@ ___
 
 ## Buggy Code
 
-[import, 1.js](../challenges/1.js)
+[import, 1.js](../bug.js)
 
 [TOP](#hoisting-inside-a-function)
 

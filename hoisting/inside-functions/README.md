@@ -51,6 +51,8 @@ ___
 
 * [A Guide to Hoisting](https://medium.freecodecamp.org/what-is-variable-hoisting-differentiating-between-var-let-and-const-in-es6-f1a70bb43d)
 
+
+
 [TOP](#resources)
 
 ___

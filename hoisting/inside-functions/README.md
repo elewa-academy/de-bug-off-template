@@ -2,6 +2,8 @@
 
 This is a tricky bug because there is no way to figure it out logically by tracing the code.  You have to understand how JS declares and assigns variables at runtime in order to fix it.
 
+Play with the example [right here](https://goo.gl/ojck2y).
+
 ### Index
 * [Solution](#solution)
 * [Buggy Code](#buggy-code)

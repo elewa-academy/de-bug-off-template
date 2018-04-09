@@ -3,6 +3,8 @@
 * [(De)bug-off](README.md)   
 * [Hoisting](./hoisting/README.md)
     * [Inside Functions](./hoisting/inside-functions/README.md)
+* [Strings](./strings/README.md)
+    * [Strings are Immutable](./strings/strings-are-immutable/README.md)
 * [Repo](https://github.com/elewa-academy/de-bug-off-template)
 * [Gallery](your debugoff gallery)
 * [Home](your portfolio)

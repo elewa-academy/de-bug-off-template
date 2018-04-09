@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Inside Functions · GitBook</title>
+        <title>Strings are Immutable · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -65,8 +65,6 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../strings/" />
-    
     
     <link rel="prev" href="../" />
     
@@ -110,9 +108,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../">
+        <li class="chapter " data-level="1.2" data-path="../../hoisting/">
             
-                <a href="../">
+                <a href="../../hoisting/">
             
                     
                     Hoisting
@@ -124,9 +122,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="../../hoisting/inside-functions/">
             
-                <a href="./">
+                <a href="../../hoisting/inside-functions/">
             
                     
                     Inside Functions
@@ -142,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../../strings/">
+        <li class="chapter " data-level="1.3" data-path="../">
             
-                <a href="../../strings/">
+                <a href="../">
             
                     
                     Strings
@@ -156,9 +154,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../../strings/strings-are-immutable/">
+        <li class="chapter active" data-level="1.3.1" data-path="./">
             
-                <a href="../../strings/strings-are-immutable/">
+                <a href="./">
             
                     
                     Strings are Immutable
@@ -250,7 +248,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Inside Functions</a>
+        <a href="../.." >Strings are Immutable</a>
     </h1>
 </div>
 
@@ -265,12 +263,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hoisting-inside-a-function">Hoisting Inside a Function</h1>
-<p>This is a tricky bug because there is no way to figure it out logically by tracing the code.  You have to understand how JS declares and assigns variables at runtime in order to fix it.</p>
+                                <h1 id="strings-are-immutable">Strings are Immutable</h1>
+<p>Strings are immutable, meaning you can&apos;t change them once they&apos;re created.</p>
 <blockquote>
-<p>Error Message (if there was one) - consider using this as the title of the README &amp; folder</p>
+<p>TypeError: Cannot create property &apos;0&apos; on string</p>
 </blockquote>
-<p>Play with the example <a href="https://goo.gl/ojck2y" target="_blank">right here</a>.</p>
+<p>Play with the example <a href="https://goo.gl/eicpFS" target="_blank">right here</a>.</p>
 <h3 id="index">Index</h3>
 <ul>
 <li><a href="#solution">Solution</a></li>
@@ -282,24 +280,15 @@
 </ul>
 <hr>
 <h2 id="solution">Solution</h2>
-<p>It wasn&apos;t entirely clear what the bug was because I wasn&apos;t sure what the code was <em>supposed to</em> do. </p>
-<p>So I took a guess that it was expected to print &quot;global&quot; and then &quot;local&quot;.  To make it do this I removed the variable declaration inside of the <em>if</em> statement so there wouldn&apos;t be an undefined myVar hoisted above the &quot;local&quot; value assignment.</p>
+<p>Instead of modifying the existing string, I built up new strings based on the old one.</p>
 <p><a href="#hoisting-inside-a-function">TOP</a></p>
 <hr>
 <h2 id="buggy-code">Buggy Code</h2>
 <blockquote>
 <p><a id="bug.js" href="bug.js">bug.js</a></p>
 </blockquote>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">var myvar = &quot;global&quot;;
-function buggy() {
-    console.log(myvar); // (*)
-    if (true) {
-        var myvar = &quot;local&quot;; // (**)
-    }
-    console.log(myvar);
-}
-
-// http://2ality.com/2011/02/javascript-variable-scoping-and-its.html<br></div></div>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">let str = &quot;choolbus&quot;
+str[0] = &quot;s&quot;<br></div></div>
 
 
 
@@ -309,7 +298,8 @@ function buggy() {
 <blockquote>
 <p><a id="test-cases.js" href="test-cases.js">test-cases.js</a></p>
 </blockquote>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">// clever test cases that make everything understandable<br></div></div>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">console.log(&quot;should be schoolbus:&quot;, str);
+console.log(&quot;should be schoolbus:&quot;, new_str);<br></div></div>
 
 
 
@@ -319,14 +309,8 @@ function buggy() {
 <blockquote>
 <p><a id="fix.js" href="fix.js">fix.js</a></p>
 </blockquote>
-<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">var myvar = &quot;global&quot;;
-function fixed() {
-    console.log(myvar); // (*)
-    if (true) {
-        myvar = &quot;local&quot;; // (**)
-    }
-    console.log(myvar);
-}<br></div></div>
+<div class="ace"><div class="aceCode" data-config="{&quot;edit&quot;:true,&quot;lang&quot;:&quot;javascript&quot;,&quot;check&quot;:false,&quot;theme&quot;:&quot;monokai&quot;}">let str = &quot;choolbus&quot;
+let new_str = &quot;s&quot; + str<br></div></div>
 
 
 
@@ -334,7 +318,7 @@ function fixed() {
 <hr>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://medium.freecodecamp.org/what-is-variable-hoisting-differentiating-between-var-let-and-const-in-es6-f1a70bb43d" target="_blank">A Guide to Hoisting</a></li>
+<li><a href="https://stackoverflow.com/questions/51185/are-javascript-strings-immutable-do-i-need-a-string-builder-in-javascript" target="_blank">StackOverflow Answer</a></li>
 </ul>
 <p><a href="#resources">TOP</a></p>
 <hr>
@@ -367,14 +351,10 @@ function fixed() {
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Hoisting">
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Strings">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../../strings/" class="navigation navigation-next " aria-label="Next page: Strings">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -383,7 +363,7 @@ function fixed() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Inside Functions","level":"1.2.1","depth":2,"next":{"title":"Strings","level":"1.3","depth":1,"path":"strings/README.md","ref":"./strings/README.md","articles":[{"title":"Strings are Immutable","level":"1.3.1","depth":2,"path":"strings/strings-are-immutable/README.md","ref":"./strings/strings-are-immutable/README.md","articles":[]}]},"previous":{"title":"Hoisting","level":"1.2","depth":1,"path":"hoisting/README.md","ref":"./hoisting/README.md","articles":[{"title":"Inside Functions","level":"1.2.1","depth":2,"path":"hoisting/inside-functions/README.md","ref":"./hoisting/inside-functions/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","include-codeblock","ace","scripts"],"pluginsConfig":{"ace":{},"scripts":{"files":["./scripts/serve.js"]},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"hoisting/inside-functions/README.md","mtime":"2018-04-09T13:32:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-04-09T13:56:10.256Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Strings are Immutable","level":"1.3.1","depth":2,"next":{"title":"Repo","level":"1.4","depth":1,"url":"https://github.com/elewa-academy/de-bug-off-template","ref":"https://github.com/elewa-academy/de-bug-off-template","articles":[]},"previous":{"title":"Strings","level":"1.3","depth":1,"path":"strings/README.md","ref":"./strings/README.md","articles":[{"title":"Strings are Immutable","level":"1.3.1","depth":2,"path":"strings/strings-are-immutable/README.md","ref":"./strings/strings-are-immutable/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["collapsible-chapters","include-codeblock","ace","scripts"],"pluginsConfig":{"ace":{},"scripts":{"files":["./scripts/serve.js"]},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"acefull","theme":"monokai","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"strings/strings-are-immutable/README.md","mtime":"2018-04-09T13:48:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-04-09T13:56:10.256Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
